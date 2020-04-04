@@ -1,16 +1,29 @@
 package Main;
 
+import Servicios.BaseDatosServicios;
+import Servicios.BootStrapServicios;
+
 import java.sql.SQLException;
 
 public class Main {
 
-    try {
+    public static void main(String[] args){
 
-        
+        try {
 
-    }
-    catch (SQLException e){
-        e.printStackTrace();
+            BootStrapServicios.iniciarBaseDatos();
+
+            BaseDatosServicios.getInstancia().testConexion();
+
+            BootStrapServicios.crearTablas();
+
+            
+
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+
     }
 
 }
