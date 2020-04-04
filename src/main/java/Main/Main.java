@@ -2,6 +2,7 @@ package Main;
 
 import Servicios.BaseDatosServicios;
 import Servicios.BootStrapServicios;
+import Servicios.UsuarioServicios;
 
 import java.sql.SQLException;
 
@@ -17,7 +18,10 @@ public class Main {
 
             BootStrapServicios.crearTablas();
 
-            
+            UsuarioServicios serviciouser = new UsuarioServicios();
+            serviciouser.crearUsuarioPorDefecto();
+
+
 
         }
         catch (SQLException e){
