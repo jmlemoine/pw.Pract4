@@ -21,6 +21,8 @@ public class Main {
             UsuarioServicios serviciouser = new UsuarioServicios();
             serviciouser.crearUsuarioPorDefecto();
 
+            Enrutamiento.crearRutas();
+
 
 
         }
